@@ -1111,65 +1111,9 @@ img {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 0 1rem;
-    }
-
-    .section {
-        padding: 4rem 0;
-    }
-
-    .hero {
-        padding-top: 6rem;
-    }
-
-    .title {
-        font-size: 2.2rem;
-    }
-
-    .hero-image {
-        width: 250px;
-        height: 250px;
-    }
-
-    .achievement-card {
-        padding: 1.5rem;
-    }
-
-    .certificates-grid,
-    .projects-grid,
-    .contact-methods {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline::after {
-        left: 21px;
-    }
-
-    .timeline-item {
-        padding-left: 55px;
-    }
-
-    .timeline-item::after,
-    .left::after,
-    .right::after {
-        left: 21px;
-    }
-
-    .contact-box {
-        padding: 2rem 1rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-}
 
 /* ==========================================================================
-   Mobile Responsive: 325px and Above
+   Mobile Responsive (325px - 600px)
    ========================================================================== */
 
 @media screen and (min-width:325px) and (max-width:600px) {
@@ -1180,8 +1124,10 @@ img {
     }
 
 
+    /* Container */
     .container {
         padding: 0 1rem;
+        width: 100%;
     }
 
 
@@ -1190,7 +1136,11 @@ img {
     }
 
 
-    /* Navbar */
+
+    /* ==========================
+       Navbar
+       ========================== */
+
     .navbar {
         padding: 1rem 0;
     }
@@ -1200,159 +1150,387 @@ img {
     }
 
     .hamburger {
+        display: block;
         font-size: 1.5rem;
     }
 
 
-    /* Hero */
+
+    /* ==========================
+       Hero Section
+       ========================== */
+
     .hero {
-        padding-top: 5.5rem;
         min-height: auto;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+
+    .hero .grid-2-col {
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 2rem;
+
         text-align: center;
     }
 
 
-    .title {
-        font-size: clamp(2rem, 10vw, 2.5rem);
-        line-height: 1.15;
+    .hero-content {
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        order: 2;
     }
 
 
-    .subtitle {
-        font-size: clamp(1.2rem, 6vw, 1.6rem);
+    .hero-image-wrapper {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        order: 1;
     }
 
-
-    .description {
-        font-size: 0.95rem;
-        width:100%;
-    }
 
 
     .hero-image {
+
         width: min(70vw,240px);
+
         height: min(70vw,240px);
     }
 
 
-    .social-links {
-        justify-content:center;
-        gap:0.8rem;
+
+    .greeting {
+
+        font-size: 1rem;
+
     }
 
+
+
+    .title {
+
+        font-size: clamp(2rem,10vw,2.5rem);
+
+        line-height: 1.15;
+
+        text-align:center;
+    }
+
+
+
+    .subtitle {
+
+        font-size: clamp(1.2rem,6vw,1.6rem);
+
+        text-align:center;
+
+    }
+
+
+
+    .description {
+
+        width:100%;
+
+        max-width:350px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+        font-size:0.95rem;
+
+        text-align:center;
+
+    }
+
+
+
+
+    /* Social links */
+
+    .social-links {
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:0.8rem;
+
+        margin-bottom:1.5rem;
+
+    }
+
+
+
+    .social-links a {
+
+        width:40px;
+
+        height:40px;
+
+        font-size:1.1rem;
+
+    }
+
+
+
+
+    /* Buttons */
 
     .hero-actions {
-        flex-direction:column;
+
         width:100%;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:0.8rem;
+
     }
+
 
 
     .hero-actions .btn {
+
         width:100%;
+
+        max-width:280px;
+
+        text-align:center;
+
     }
 
 
 
-    /* Achievement */
+
+
+    /* ==========================
+       Section Header
+       ========================== */
+
+
+    .section-title {
+
+        font-size:2rem;
+
+        text-align:center;
+
+    }
+
+
+    .section-subtitle {
+
+        font-size:0.95rem;
+
+        text-align:center;
+
+    }
+
+
+
+
+    /* ==========================
+       Achievement
+       ========================== */
+
+
     .achievement-card {
+
         padding:1.2rem;
+
         gap:1.5rem;
+
         flex-direction:column !important;
+
+        text-align:left;
+
     }
 
 
     .achievement-content h3 {
+
         font-size:1.3rem;
+
     }
 
 
     .achievement-meta {
+
         font-size:0.9rem;
+
     }
 
 
 
-    /* Certificates */
+
+    /* ==========================
+       Certificates & Projects
+       ========================== */
+
+
     .certificates-grid,
     .projects-grid,
     .contact-methods {
+
         grid-template-columns:1fr;
+
     }
+
 
 
     .cert-info,
     .project-content {
+
         padding:1rem;
+
     }
 
 
 
-    /* Timeline */
+    /* ==========================
+       Timeline
+       ========================== */
+
+
     .timeline::after {
+
         left:18px;
+
     }
 
 
     .timeline-item {
+
         width:100%;
+
         padding-left:45px;
+
         padding-right:0;
+
     }
 
 
     .timeline-item::after,
     .left::after,
     .right::after {
+
         left:18px;
+
     }
 
 
     .timeline-content {
+
         padding:1rem;
+
     }
 
 
 
-    /* Contact */
+
+    /* ==========================
+       Contact
+       ========================== */
+
+
     .contact-box {
+
         padding:1.5rem 1rem;
+
     }
+
 
 
     .contact-box h2 {
+
         font-size:1.8rem;
+
     }
+
 
 
     .contact-item {
+
         padding:1rem;
+
     }
+
 
 
     .contact-details a {
+
         font-size:0.9rem;
+
         word-break:break-word;
+
     }
 
 
 
-    /* Footer */
+
+    /* ==========================
+       Footer
+       ========================== */
+
+
     .footer-content {
+
         flex-direction:column;
+
         text-align:center;
+
+        gap:1rem;
+
     }
 
 
-    /* Background blobs */
+
+
+    /* ==========================
+       Background Effects
+       ========================== */
+
+
     .blob-1 {
+
         width:250px;
+
         height:250px;
+
     }
 
 
     .blob-2 {
+
         width:300px;
+
         height:300px;
+
     }
 
 }
