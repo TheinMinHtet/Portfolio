@@ -114,7 +114,7 @@ User Question: ${query}`;
         res.json({ reply: aiReply });
     } catch (error) {
         console.error("Chat API Error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({ error: error.message || "Internal Server Error" });
     }
 });
 
