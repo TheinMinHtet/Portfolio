@@ -1109,3 +1109,60 @@ img {
         display: none !important;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .achievement-card {
+        padding: 1.5rem;
+    }
+
+    .certificates-grid,
+    .projects-grid,
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::after {
+        left: 21px;
+    }
+
+    .timeline-item {
+        padding-left: 55px;
+    }
+
+    .timeline-item::after,
+    .left::after,
+    .right::after {
+        left: 21px;
+    }
+
+    .contact-box {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
