@@ -118,8 +118,11 @@ User Question: ${query}`;
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server listening on http://localhost:${port}`);
-});
+// Only listen locally, Vercel will use the exported app directly
+if (process.env.NODE_ENV !== 'production' && process.env.VERCEL !== '1') {
+    app.listen(port, () => {
+        console.log(`Server listening on http://localhost:${port}`);
+    });
+}
 
 export default app;
