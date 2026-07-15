@@ -1167,26 +1167,28 @@ img {
         gap: 1rem;
     }
 }
+
 /* ==========================================================================
-   Extra Small Mobile Responsive (375px and below)
+   Mobile Responsive: 325px and Above
    ========================================================================== */
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width:325px) and (max-width:600px) {
 
     html,
     body {
-        width: 100%;
         overflow-x: hidden;
     }
 
+
     .container {
-        padding: 0 0.75rem;
-        width: 100%;
+        padding: 0 1rem;
     }
 
+
     .section {
-        padding: 3rem 0;
+        padding: 3.5rem 0;
     }
+
 
     /* Navbar */
     .navbar {
@@ -1204,165 +1206,153 @@ img {
 
     /* Hero */
     .hero {
-        min-height: auto;
         padding-top: 5.5rem;
-        padding-bottom: 3rem;
-    }
-
-    .greeting {
-        font-size: 1rem;
-    }
-
-    .title {
-        font-size: 2rem;
-        line-height: 1.15;
-        word-break: break-word;
-    }
-
-    .subtitle {
-        font-size: 1.25rem;
-        line-height: 1.3;
-    }
-
-    .description {
-        font-size: 0.95rem;
-        max-width: 100%;
-    }
-
-
-    /* Profile Image */
-    .hero-image {
-        width: 210px;
-        height: 210px;
-    }
-
-
-    /* Buttons */
-    .hero-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
+        min-height: auto;
         text-align: center;
     }
 
 
-    /* Social icons */
-    .social-links {
-        gap: 0.8rem;
-    }
-
-    .social-links a {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+    .title {
+        font-size: clamp(2rem, 10vw, 2.5rem);
+        line-height: 1.15;
     }
 
 
-    /* Section titles */
-    .section-title {
-        font-size: 2rem;
+    .subtitle {
+        font-size: clamp(1.2rem, 6vw, 1.6rem);
     }
 
-    .section-subtitle {
+
+    .description {
         font-size: 0.95rem;
+        width:100%;
     }
 
 
-    /* Achievement cards */
+    .hero-image {
+        width: min(70vw,240px);
+        height: min(70vw,240px);
+    }
+
+
+    .social-links {
+        justify-content:center;
+        gap:0.8rem;
+    }
+
+
+    .hero-actions {
+        flex-direction:column;
+        width:100%;
+    }
+
+
+    .hero-actions .btn {
+        width:100%;
+    }
+
+
+
+    /* Achievement */
     .achievement-card {
-        padding: 1rem;
-        gap: 1.5rem;
-        border-radius: 15px;
+        padding:1.2rem;
+        gap:1.5rem;
+        flex-direction:column !important;
     }
+
 
     .achievement-content h3 {
-        font-size: 1.35rem;
+        font-size:1.3rem;
     }
 
+
     .achievement-meta {
-        font-size: 0.95rem;
+        font-size:0.9rem;
     }
+
 
 
     /* Certificates */
     .certificates-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .projects-grid,
+    .contact-methods {
+        grid-template-columns:1fr;
     }
+
 
     .cert-info,
     .project-content {
-        padding: 1.2rem;
+        padding:1rem;
     }
+
 
 
     /* Timeline */
     .timeline::after {
-        left: 15px;
+        left:18px;
     }
 
+
     .timeline-item {
-        padding-left: 40px;
-        padding-right: 0;
+        width:100%;
+        padding-left:45px;
+        padding-right:0;
     }
+
 
     .timeline-item::after,
     .left::after,
     .right::after {
-        left: 15px;
+        left:18px;
     }
+
 
     .timeline-content {
-        padding: 1.2rem;
+        padding:1rem;
     }
 
-    .timeline-content h3 {
-        font-size: 1.15rem;
-    }
 
 
     /* Contact */
     .contact-box {
-        padding: 1.5rem 0.8rem;
+        padding:1.5rem 1rem;
     }
+
 
     .contact-box h2 {
-        font-size: 2rem;
+        font-size:1.8rem;
     }
+
 
     .contact-item {
-        padding: 1.2rem;
+        padding:1rem;
     }
 
+
     .contact-details a {
-        font-size: 0.95rem;
-        word-break: break-word;
+        font-size:0.9rem;
+        word-break:break-word;
     }
+
 
 
     /* Footer */
     .footer-content {
-        gap: 1.5rem;
+        flex-direction:column;
+        text-align:center;
     }
 
 
-    /* Remove huge background overflow */
+    /* Background blobs */
     .blob-1 {
-        width: 250px;
-        height: 250px;
+        width:250px;
+        height:250px;
     }
+
 
     .blob-2 {
-        width: 300px;
-        height: 300px;
+        width:300px;
+        height:300px;
     }
 
-
-    /* Mobile menu */
-    .mobile-nav-links {
-        width: 220px;
-    }
-}}
+}
