@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
-import { pipeline } from '@xenova/transformers';
+import { pipeline, env } from '@xenova/transformers';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenerativeAI } from '@google/generative-ai';
@@ -25,6 +25,9 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+
+// Set Xenova cache directory to /tmp to bypass Vercel's read-only file system
+env.cacheDir = '/tmp/.cache';
 
 let generateEmbedding;
 
@@ -93,3 +96,5 @@ User Question: ${query}`;
 app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
 });
+
+export default app;
