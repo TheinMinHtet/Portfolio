@@ -454,7 +454,6 @@ img {
     border-top: var(--glass-border);
     border-bottom: var(--glass-border);
     overflow: hidden;
-    display: flex;
     white-space: nowrap;
     position: relative;
 }
@@ -467,7 +466,7 @@ img {
 .marquee-content {
     display: flex;
     align-items: center;
-    padding-right: 2rem;
+    flex-shrink: 0;
 }
 
 .marquee-content span {
