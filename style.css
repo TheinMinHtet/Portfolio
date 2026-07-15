@@ -454,18 +454,23 @@ img {
     border-top: var(--glass-border);
     border-bottom: var(--glass-border);
     overflow: hidden;
+    display: flex;
     white-space: nowrap;
     position: relative;
 }
 
 .marquee {
     display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
     animation: scroll 60s linear infinite;
 }
 
 .marquee-content {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
     flex-shrink: 0;
 }
 
