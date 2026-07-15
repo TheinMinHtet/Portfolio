@@ -9,9 +9,6 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 dotenv.config();
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const aiModel = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -24,27 +21,55 @@ app.use(express.json());
 // Serve static frontend files
 app.use(express.static(__dirname));
 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+let supabase = null;
+let aiModel = null;
+
+function initializeClients() {
+    if (!process.env.GEMINI_API_KEY || !process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+        throw new Error("Missing variables! Add GEMINI_API_KEY, SUPABASE_URL, and SUPABASE_SERVICE_ROLE_KEY to Vercel.");
+    }
+    if (!supabase) {
+        supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+    }
+    if (!aiModel) {
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+        // Using "gemini-1.5-flash" as 3.1-flash-lite doesn't exist out of the box in most accounts.
+        aiModel = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
+    }
+}
 
 // Set Xenova cache directory to /tmp to bypass Vercel's read-only file system
 env.cacheDir = '/tmp/.cache';
 
-let generateEmbedding;
-
-// Pre-load the Xenova embedding model
-(async () => {
-    console.log("Loading Xenova embedding model...");
-    generateEmbedding = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
-        quantized: false,
-    });
-    console.log("Model loaded successfully.");
-})();
+let generateEmbeddingPromise = null;
 
 app.post('/api/chat', async (req, res) => {
     try {
         const { query } = req.body;
         if (!query) return res.status(400).json({ error: "Query is required" });
-        if (!generateEmbedding) return res.status(503).json({ error: "Model is loading, please try again." });
+
+        try {
+            initializeClients();
+        } catch (initErr) {
+            console.error("Initialization Error:", initErr.message);
+            return res.status(500).json({ error: initErr.message });
+        }
+
+        if (!generateEmbeddingPromise) {
+            console.log("Loading Xenova embedding model...");
+            generateEmbeddingPromise = pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                quantized: false,
+            });
+        }
+
+        let generateEmbedding;
+        try {
+            generateEmbedding = await generateEmbeddingPromise;
+            console.log("Model loaded successfully.");
+        } catch (err) {
+            generateEmbeddingPromise = null; // Reset on error
+            throw new Error(`Failed to load embedding model: ${err.message}`);
+        }
 
         console.log(`Received query: "${query}"`);
 

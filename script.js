@@ -156,7 +156,12 @@ if (chatbotToggleBtn && chatbotWindow) {
             });
 
             if (!response.ok) {
-                throw new Error("API response error");
+                let errorMsg = "API response error";
+                try {
+                    const errorData = await response.json();
+                    if (errorData.error) errorMsg = errorData.error;
+                } catch (e) { }
+                throw new Error(errorMsg);
             }
 
             const data = await response.json();
@@ -168,7 +173,7 @@ if (chatbotToggleBtn && chatbotWindow) {
         } catch (error) {
             console.error("Chat Error:", error);
             chatbotMessages.lastElementChild.remove();
-            appendMessage("Sorry, I'm having trouble connecting to the server.", 'bot');
+            appendMessage(error.message || "Sorry, I'm having trouble connecting to the server.", 'bot');
         }
     };
 
