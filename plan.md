@@ -11,7 +11,7 @@ Please fill out the blanks/placeholders below with your details. Once you have e
 * **Phone Number**: [Insert Phone Number, +959954807078]
 * **Personal Gmail**: [Insert Personal Gmail, theinminhtet712005@gmail.com]
 * **University Email**: [Insert University Email, theinminhtet@uit.edu.mm]
-* **Image Filename/Path**: ["C:\Users\Asus\Downloads\Gemini_Generated_Image_px191zpx191zpx19.png"]
+* **Image Filename/Path**: ["C:\Users\Asus\Downloads\Telegram Desktop\photo_2026-07-15_18-33-05.jpg"]
 
 ---
 
