@@ -43,6 +43,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
@@ -1166,3 +1167,202 @@ img {
         gap: 1rem;
     }
 }
+/* ==========================================================================
+   Extra Small Mobile Responsive (375px and below)
+   ========================================================================== */
+
+@media screen and (max-width: 375px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+        width: 100%;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
+    }
+
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .greeting {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 1.15;
+        word-break: break-word;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+
+    /* Profile Image */
+    .hero-image {
+        width: 210px;
+        height: 210px;
+    }
+
+
+    /* Buttons */
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* Social icons */
+    .social-links {
+        gap: 0.8rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+
+    /* Section titles */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+
+    /* Achievement cards */
+    .achievement-card {
+        padding: 1rem;
+        gap: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .achievement-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .achievement-meta {
+        font-size: 0.95rem;
+    }
+
+
+    /* Certificates */
+    .certificates-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-info,
+    .project-content {
+        padding: 1.2rem;
+    }
+
+
+    /* Timeline */
+    .timeline::after {
+        left: 15px;
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    .timeline-item::after,
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    .timeline-content {
+        padding: 1.2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.15rem;
+    }
+
+
+    /* Contact */
+    .contact-box {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .contact-box h2 {
+        font-size: 2rem;
+    }
+
+    .contact-item {
+        padding: 1.2rem;
+    }
+
+    .contact-details a {
+        font-size: 0.95rem;
+        word-break: break-word;
+    }
+
+
+    /* Footer */
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+
+    /* Remove huge background overflow */
+    .blob-1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .blob-2 {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    /* Mobile menu */
+    .mobile-nav-links {
+        width: 220px;
+    }
+}}
