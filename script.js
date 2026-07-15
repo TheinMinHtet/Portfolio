@@ -146,10 +146,10 @@ if (chatbotToggleBtn && chatbotWindow) {
         // Add loading bubble
         const loadingId = 'loading-' + Date.now();
         appendMessage('<span class="ri-loader-4-line ri-spin"></span> Thinking...', 'bot');
-        
+
         try {
             // Fetch real answer from the Node backend
-            const response = await fetch('http://localhost:3000/api/chat', {
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ query: text })
@@ -160,10 +160,10 @@ if (chatbotToggleBtn && chatbotWindow) {
             }
 
             const data = await response.json();
-            
+
             // Remove the loading bubble by finding the last appended bot message
             chatbotMessages.lastElementChild.remove();
-            
+
             appendMessage(data.reply, 'bot');
         } catch (error) {
             console.error("Chat Error:", error);
