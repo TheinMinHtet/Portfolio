@@ -54,13 +54,17 @@ Please fill out the blanks/placeholders below with your details. Once you have e
 In March 2026, I led Team SwiftFix to win 1st Place in the AppCube Developers Bootcamp & Hackathon, a program designed to transform innovative ideas into functional Mini Apps. As the Team Leader, I coordinated the team's development process, guided technical decisions, and contributed to the design and implementation of our solution. Our project was recognized for its innovation, functionality, and overall quality, earning the top award in the competition.]
 * **Image Filename/Path**: ["C:\Users\Asus\Downloads\miniapp.jpg"]
 
-### Achievement 2: [Achievement Title]
+### Achievement 2: 1st Runner-Up – Let's Tech Hackathon (Agentic Edition)
+* **Description**: In July 2026, I achieved 1st Runner-Up at the Let's Tech Hackathon (Agentic Edition) as the Team Leader of Team J.A.R.V.I.S. During this 48-hour hackathon, I collaborated with my teammates to develop an AI-driven solution and contributed to the planning, technical decisions, and implementation process. Throughout the competition, I gained valuable experience in agentic AI workflows, teamwork, problem-solving, and rapid development. With the guidance and support from experienced mentors, our team refined our ideas and successfully delivered our project, earning recognition as one of the top teams in the competition.
+* **Image Filename/Path**: ["C:\Users\Asus\Downloads\Telegram Desktop\IMG_3364.JPG"]
+
+### Achievement 3: [Achievement Title]
 * **Description**: [2nd Runner-Up – Technortal Hackathon: One Project, One Week
 
 In May 2026, as a Co-Team Leader, I helped lead my team to achieve 2nd Runner-Up in the Technortal Hackathon: One Project, One Week. The intensive week-long program challenged participants to build a working prototype from scratch while solving real-world problems. I collaborated on project planning, coordinated development tasks, contributed to technical decisions and implementation, and worked closely with the team to deliver a functional and innovative solution within the competition timeframe.]
 * **Image Filename/Path**: ["C:\Users\Asus\Downloads\technortal.jpg"]
 
-### Achievement 3: [Achievement Title]
+### Achievement 4: [Achievement Title]
 * **Description**: [Top 10 National Finalist – ASEAN Data Science Explorers 2025
 
 Recognized as a Top 10 National Finalist in the ASEAN Data Science Explorers 2025, a prestigious regional competition that empowers students to address real-world challenges through data analytics and data storytelling. Working as part of a team, I contributed to analyzing data, developing evidence-based insights, and creating a compelling data-driven presentation to propose innovative solutions for regional and societal issues.]
