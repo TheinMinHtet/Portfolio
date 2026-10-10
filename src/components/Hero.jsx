@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const ActionButtons = ({ className }) => (
     <motion.div 
-      className={`flex flex-col sm:flex-row flex-wrap gap-4 w-full ${className}`}
+      className={`grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto lg:max-w-none lg:mx-0 lg:flex lg:flex-row lg:w-fit ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
     >
-      <a href="#projects" className="glass-button-primary !w-full sm:!w-fit justify-center">
+      <a href="#projects" className="glass-button-primary !w-full lg:!w-fit justify-center">
         View Work <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="#contact" className="glass-button !w-full sm:!w-fit justify-center">
+      <a href="#contact" className="glass-button !w-full lg:!w-fit justify-center">
         Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit justify-center">
+      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full lg:!w-fit justify-center col-span-2 lg:col-span-1">
         Download CV <i className="ri-download-line text-lg leading-none"></i>
       </a>
     </motion.div>
