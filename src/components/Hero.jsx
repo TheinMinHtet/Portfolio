@@ -2,9 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const ActionButtons = ({ className }) => (
+    <motion.div 
+      className={`flex flex-col sm:flex-row flex-wrap gap-4 w-full ${className}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1 }}
+    >
+      <a href="#projects" className="glass-button-primary !w-full sm:!w-fit justify-center">
+        View Work <i className="ri-arrow-right-up-line text-lg leading-none"></i>
+      </a>
+      <a href="#contact" className="glass-button !w-full sm:!w-fit justify-center">
+        Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
+      </a>
+      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit justify-center">
+        Download CV <i className="ri-download-line text-lg leading-none"></i>
+      </a>
+    </motion.div>
+  );
+
   return (
     <section id="about" className="min-h-screen flex items-center pt-24 pb-24 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full z-10">
+      <div className="max-w-[1200px] mx-auto px-8 flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-16 items-center w-full z-10">
+        
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +41,7 @@ const Hero = () => {
           </p>
 
           <motion.div 
-            className="flex gap-4 mb-6"
+            className="flex flex-wrap gap-4 mb-2 md:mb-6"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
@@ -57,29 +77,15 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          <motion.div 
-            className="flex flex-col sm:flex-row flex-wrap gap-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
-            <a href="#projects" className="glass-button-primary w-full sm:w-fit justify-center">
-              View Work <i className="ri-arrow-right-up-line text-lg leading-none"></i>
-            </a>
-            <a href="#contact" className="glass-button w-full sm:w-fit justify-center">
-              Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
-            </a>
-            <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button w-full sm:w-fit justify-center">
-              Download CV <i className="ri-download-line text-lg leading-none"></i>
-            </a>
-          </motion.div>
+          {/* Desktop Buttons */}
+          <ActionButtons className="hidden md:flex" />
         </motion.div>
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex justify-center items-center"
+          className="relative flex justify-center items-center mt-8 md:mt-0"
         >
           <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] rounded-full p-2 bg-white border border-black/30 shadow-sm">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-black/10">
@@ -101,6 +107,9 @@ const Hero = () => {
              </div>
           </motion.div>
         </motion.div>
+
+        {/* Mobile Buttons */}
+        <ActionButtons className="flex md:hidden mt-8" />
       </div>
     </section>
   );
