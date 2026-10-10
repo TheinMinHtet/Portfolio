@@ -77,7 +77,7 @@ const Achievements = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`flex items-center gap-12 glass-card p-12 group ${i % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} flex-col`}
+              className={`flex items-center gap-8 md:gap-12 glass-card p-6 md:p-12 group ${i % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} flex-col`}
             >
               <div className="flex-1">
                 <h3 className="text-3xl mb-3 font-bold text-black">{ach.title}</h3>

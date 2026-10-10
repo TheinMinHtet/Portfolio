@@ -69,7 +69,7 @@ const Experience = () => {
               className={`mb-12 relative w-full pl-12 md:pl-0 md:w-1/2 ${i % 2 === 0 ? 'md:left-0 md:pr-12' : 'md:left-1/2 md:pl-12'}`}
             >
               {/* Timeline Dot */}
-              <div className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-accent border-4 border-bg-primary shadow-[0_0_0_4px_rgba(59,130,246,0.2)] z-10 left-[7px] ${i % 2 === 0 ? 'md:left-auto md:-right-[10px]' : 'md:-left-[10px]'}`}></div>
+              <div className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-black border-4 border-white shadow-[0_0_0_4px_rgba(0,0,0,0.1)] z-10 left-[7px] ${i % 2 === 0 ? 'md:left-auto md:-right-[10px]' : 'md:-left-[10px]'}`}></div>
               
               <div className="glass-card p-8 group text-center flex flex-col items-center">
                 <h3 className="text-2xl mb-2 font-bold text-black group-hover:text-accent-secondary transition-colors">{exp.title}</h3>

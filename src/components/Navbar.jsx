@@ -71,7 +71,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="fixed top-0 right-0 w-3/4 max-w-sm h-screen glass-nav bg-bg-primary/95 flex flex-col pt-24 shadow-2xl z-[999]"
+            className="fixed top-0 right-0 w-3/4 max-w-sm h-screen glass-nav bg-white/95 flex flex-col pt-24 shadow-2xl z-[999]"
           >
             {[...navLinks, 'Contact Me'].map((item, i) => (
               <motion.li 
