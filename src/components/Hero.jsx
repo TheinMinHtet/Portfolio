@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <section id="about" className="min-h-screen flex items-center pt-24 pb-24 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-8 flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-16 items-center w-full z-10">
+      <div className="max-w-[1200px] mx-auto px-8 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full z-10">
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ const Hero = () => {
           </p>
 
           <motion.div 
-            className="flex flex-wrap gap-4 mb-2 md:mb-6"
+            className="flex flex-wrap gap-4 mb-2 lg:mb-6"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
@@ -78,14 +78,14 @@ const Hero = () => {
           </motion.div>
 
           {/* Desktop Buttons */}
-          <ActionButtons className="hidden md:flex" />
+          <ActionButtons className="hidden lg:flex" />
         </motion.div>
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex justify-center items-center mt-8 md:mt-0"
+          className="relative flex justify-center items-center mt-8 lg:mt-0"
         >
           <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] rounded-full p-2 bg-white border border-black/30 shadow-sm">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-black/10">
@@ -96,7 +96,7 @@ const Hero = () => {
           <motion.div 
             animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-8 -right-8 glass-card p-4 rounded-none flex items-center gap-4"
+            className="absolute -bottom-8 -right-8 sm:-right-4 lg:-right-8 glass-card p-4 rounded-none flex items-center gap-4"
           >
              <div className="w-12 h-12 rounded-none bg-black/5 border border-black/30 flex items-center justify-center text-black text-2xl">
                <i className="ri-code-line"></i>
@@ -109,7 +109,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Mobile Buttons */}
-        <ActionButtons className="flex md:hidden mt-8" />
+        <ActionButtons className="flex lg:hidden mt-8" />
       </div>
     </section>
   );
