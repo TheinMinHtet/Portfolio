@@ -15,8 +15,12 @@
   --font-body: 'Inter', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
-  @apply font-body bg-bg-primary text-text-secondary leading-relaxed overflow-x-hidden relative min-h-screen selection:bg-black/10 selection:text-black;
+  @apply font-body bg-white text-text-secondary leading-relaxed relative min-h-screen selection:bg-black/10 selection:text-black;
 }
 
 /* Base Pattern Background (Light) */
