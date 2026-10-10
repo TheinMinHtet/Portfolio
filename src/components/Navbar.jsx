@@ -24,13 +24,13 @@ const Navbar = () => {
       id="navbar"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex justify-between items-center relative z-[1001]">
-        <a href="#" className="font-heading text-3xl font-bold tracking-wider text-black flex items-center gap-2">
+        <a href="#" className="font-heading text-3xl font-bold tracking-wider text-black flex items-center gap-2 whitespace-nowrap">
           <span className="text-accent">&lt;</span>
           TMH
           <span className="text-accent-secondary">/&gt;</span>
         </a>
         
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((item, index) => (
             <motion.li 
               key={item}
@@ -40,7 +40,7 @@ const Navbar = () => {
             >
               <a 
                 href={`#${item.toLowerCase()}`} 
-                className="text-text-secondary hover:text-black text-sm font-medium transition-colors relative group"
+                className="text-text-secondary hover:text-black text-sm font-medium transition-colors relative group whitespace-nowrap"
               >
                 {item}
                 <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full rounded-full"></span>
@@ -52,13 +52,13 @@ const Navbar = () => {
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: navLinks.length * 0.1 }}
           >
-            <a href="#contact" className="glass-button text-sm">
+            <a href="#contact" className="glass-button text-sm whitespace-nowrap">
               Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
             </a>
           </motion.li>
         </ul>
         
-        <div className="md:hidden text-2xl text-black cursor-pointer z-50 p-2 glass-panel rounded-none" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <div className="lg:hidden text-2xl text-black cursor-pointer z-50 p-2 bg-white border border-black/30 shadow-sm" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <i className={mobileMenuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
         </div>
       </div>

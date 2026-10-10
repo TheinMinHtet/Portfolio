@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <>
       <footer className="pt-8 pb-24 md:pb-8 border-t border-black/30 bg-white border-x-0 border-b-0 mt-12 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-4 sm:px-8 flex flex-wrap justify-between items-center gap-6 max-md:flex-col max-md:text-center">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-8 md:pr-24 flex flex-wrap justify-between items-center gap-6 max-md:flex-col max-md:text-center">
           <div>
             <a href="#" className="font-heading text-2xl font-bold tracking-[1px] mb-2 inline-flex text-black items-center gap-2 justify-center md:justify-start">
                <span className="text-accent">&lt;</span>
