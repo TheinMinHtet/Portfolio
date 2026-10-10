@@ -29,19 +29,19 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-4 text-center lg:text-left"
         >
           <span className="text-xl text-accent font-heading font-medium tracking-wide">Hi there, I am</span>
           <h1 className="text-5xl md:text-7xl font-heading font-extrabold text-black leading-tight">Thein Min Htet</h1>
           <h2 className="text-2xl md:text-4xl font-heading font-bold text-gradient pb-2">
             Knowledge Engineering Student
           </h2>
-          <p className="text-lg text-text-secondary max-w-lg mb-4 leading-relaxed">
+          <p className="text-lg text-text-secondary max-w-lg mx-auto lg:mx-0 mb-4 leading-relaxed">
             Currently studying at the <span className="text-black font-medium">University of Information Technology Yangon</span>. Passionate about solving real-world problems and building high-quality software solutions.
           </p>
 
           <motion.div 
-            className="flex flex-wrap gap-3 sm:gap-4 mb-4 lg:mb-6 justify-center md:justify-start"
+            className="flex flex-wrap gap-3 sm:gap-4 mb-4 lg:mb-6 justify-center lg:justify-start"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
