@@ -12,9 +12,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="relative z-10 pt-20">
+      <main className="relative z-10 pt-20 flex-1">
         <Hero />
         <Marquee />
         <Achievements />
@@ -24,7 +24,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

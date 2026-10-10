@@ -22,8 +22,8 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="pt-8 pb-24 md:pb-8 border-t border-black/30 bg-white border-x-0 border-b-0 mt-12 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-8 md:pr-24 flex flex-wrap justify-between items-center gap-6 max-md:flex-col max-md:text-center">
+      <footer className="pt-8 pb-24 md:pb-8 border-t border-black/30 bg-white border-x-0 border-b-0 mt-12 relative z-10 w-full">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-8 md:pr-24 flex flex-col md:flex-row flex-wrap justify-between items-center gap-6 text-center md:text-left">
           <div>
             <a href="#" className="font-heading text-2xl font-bold tracking-[1px] mb-2 inline-flex text-black items-center gap-2 justify-center md:justify-start">
                <span className="text-accent">&lt;</span>
@@ -34,7 +34,7 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Thein Min Htet. All rights reserved.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-[280px] sm:max-w-none">
+          <div className="flex flex-wrap justify-center md:justify-end gap-3 sm:gap-4 w-full md:w-auto mt-4 md:mt-0">
             {[
               { href: "https://www.facebook.com/thein.m.htet.56?mibextid=ZbWKwL", icon: "ri-facebook-circle-fill", label: "Facebook" },
               { href: "https://www.linkedin.com/in/thein-min-htet-b73582349", icon: "ri-linkedin-fill", label: "LinkedIn" },
