@@ -63,11 +63,11 @@ body::before {
 }
 
 .glass-button {
-  @apply px-5 py-2.5 bg-transparent border border-black text-black text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+  @apply px-6 py-3 bg-transparent border border-black text-black text-base font-medium hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
 }
 
 .glass-button-primary {
-  @apply px-5 py-2.5 bg-black border border-black text-white text-sm font-medium hover:bg-transparent hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+  @apply px-6 py-3 bg-black border border-black text-white text-base font-medium hover:bg-transparent hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
 }
 
 .text-gradient {

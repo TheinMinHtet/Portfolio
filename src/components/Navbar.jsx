@@ -40,7 +40,7 @@ const Navbar = () => {
             >
               <a 
                 href={`#${item.toLowerCase()}`} 
-                className="text-text-secondary hover:text-black text-sm font-medium transition-colors relative group whitespace-nowrap"
+                className="text-text-secondary hover:text-black text-base font-medium transition-colors relative group whitespace-nowrap"
               >
                 {item}
                 <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full rounded-full"></span>
@@ -52,7 +52,7 @@ const Navbar = () => {
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: navLinks.length * 0.1 }}
           >
-            <a href="#contact" className="glass-button text-sm whitespace-nowrap">
+            <a href="#contact" className="glass-button text-base whitespace-nowrap">
               Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
             </a>
           </motion.li>
