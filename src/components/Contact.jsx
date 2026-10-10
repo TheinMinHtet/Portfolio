@@ -37,16 +37,16 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white border border-black/30 rounded-none shadow-sm p-10 md:p-14 text-center relative"
+          className="bg-white border border-black/30 rounded-none shadow-sm p-6 sm:p-10 md:p-14 text-center relative"
         >
           <h2 className="text-3xl md:text-4xl mb-4 font-bold text-black relative z-10">
             Let's build something amazing together.
           </h2>
-          <p className="text-text-secondary text-base max-w-2xl mx-auto mb-12 relative z-10">
+          <p className="text-text-secondary text-base max-w-2xl mx-auto mb-8 sm:mb-12 relative z-10">
             Open to discussions, project planning, and collaboration opportunities.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 relative z-10">
             {contactMethods.map((method, index) => (
               <motion.a 
                 key={index}
@@ -54,14 +54,14 @@ const Contact = () => {
                 target={method.label === "Telegram" ? "_blank" : "_self"}
                 rel="noreferrer"
                 whileHover={{ y: -4 }}
-                className="glass-panel p-6 rounded-none flex items-center gap-5 group/item transition-colors hover:bg-white/[0.03] text-left"
+                className="glass-panel p-4 sm:p-6 rounded-none flex items-center gap-3 sm:gap-5 group/item transition-colors hover:bg-white/[0.03] text-left"
               >
-                <div className="w-12 h-12 rounded-none bg-black/5 flex justify-center items-center text-xl text-text-secondary group-hover/item:text-black transition-colors border border-black/5">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-none bg-black/5 flex justify-center items-center text-lg sm:text-xl text-text-secondary group-hover/item:text-black transition-colors border border-black/5">
                   <i className={method.icon}></i>
                 </div>
-                <div className="flex-1 overflow-hidden">
-                  <span className="block text-sm text-text-secondary mb-1">{method.label}</span>
-                  <span className="font-semibold text-black truncate block w-full">{method.value}</span>
+                <div className="flex-1 overflow-hidden min-w-0">
+                  <span className="block text-xs sm:text-sm text-text-secondary mb-0.5 sm:mb-1">{method.label}</span>
+                  <span className="font-semibold text-black text-[13px] sm:text-base truncate block w-full">{method.value}</span>
                 </div>
               </motion.a>
             ))}
