@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const ActionButtons = ({ className }) => (
     <motion.div 
-      className={`flex flex-col sm:flex-row flex-wrap gap-4 w-full justify-center lg:justify-start ${className}`}
+      className={`flex flex-col sm:flex-row lg:grid lg:grid-cols-2 xl:flex xl:flex-row gap-4 w-full justify-center lg:justify-start ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
     >
-      <a href="#projects" className="glass-button-primary !w-full sm:!w-fit justify-center">
+      <a href="#projects" className="glass-button-primary !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center">
         View Work <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="#contact" className="glass-button !w-full sm:!w-fit justify-center">
+      <a href="#contact" className="glass-button !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center">
         Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit justify-center">
+      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit lg:!w-full lg:col-span-2 xl:!w-fit justify-center">
         Download CV <i className="ri-download-line text-lg leading-none"></i>
       </a>
     </motion.div>
@@ -78,7 +78,9 @@ const Hero = () => {
           </motion.div>
 
           {/* Desktop Buttons */}
-          <ActionButtons className="hidden lg:flex" />
+          <div className="hidden lg:block w-full">
+            <ActionButtons />
+          </div>
         </motion.div>
         
         <motion.div 
@@ -109,7 +111,9 @@ const Hero = () => {
         </motion.div>
 
         {/* Mobile Buttons */}
-        <ActionButtons className="flex lg:hidden mt-8" />
+        <div className="block lg:hidden w-full mt-8">
+          <ActionButtons />
+        </div>
       </div>
     </section>
   );
