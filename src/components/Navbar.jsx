@@ -23,7 +23,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${scrolled ? 'py-4 glass-nav' : 'py-6 bg-transparent'}`} 
       id="navbar"
     >
-      <div className="max-w-[1200px] mx-auto px-8 flex justify-between items-center relative z-[1001]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex justify-between items-center relative z-[1001]">
         <a href="#" className="font-heading text-3xl font-bold tracking-wider text-black flex items-center gap-2">
           <span className="text-accent">&lt;</span>
           TMH
@@ -79,7 +79,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 + 0.2 }}
                 key={item} 
-                className="py-4 px-8 border-b border-black/5"
+                className="py-4 px-4 sm:px-8 border-b border-black/5"
               >
                 <a 
                   href={`#${item.toLowerCase().replace(' ', '')}`} 

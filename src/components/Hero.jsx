@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <section id="about" className="min-h-screen flex items-center pt-24 pb-24 relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-8 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-4 sm:px-8 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full z-10">
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ const Hero = () => {
           </p>
 
           <motion.div 
-            className="flex flex-wrap gap-4 mb-2 lg:mb-6"
+            className="flex flex-wrap gap-3 sm:gap-4 mb-4 lg:mb-6 justify-center md:justify-start"
             variants={{
               hidden: { opacity: 0 },
               visible: { 
@@ -66,7 +66,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noreferrer" 
                 aria-label={link.label} 
-                className="w-11 h-11 rounded-full bg-black/5 flex justify-center items-center text-xl text-text-secondary transition-all duration-200 hover:bg-black/10 hover:text-black border border-black/5 hover:-translate-y-1 hover:scale-110 active:scale-95"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/5 flex justify-center items-center text-lg sm:text-xl text-text-secondary transition-all duration-200 hover:bg-black/10 hover:text-black border border-black/5 hover:-translate-y-1 hover:scale-110 active:scale-95"
                 variants={{
                   hidden: { opacity: 0, scale: 0 },
                   visible: { opacity: 1, scale: 1 }
