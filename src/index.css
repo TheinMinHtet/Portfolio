@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ultra-Minimalist Light Theme Colors */
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-secondary: #52525b; /* Zinc 600 */
+  
+  --color-accent: #000000;
+  --color-accent-secondary: #3f3f46;
+  --color-accent-tertiary: #71717a;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  @apply font-body bg-bg-primary text-text-secondary leading-relaxed overflow-x-hidden relative min-h-screen selection:bg-black/10 selection:text-black;
+}
+
+/* Base Pattern Background (Light) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Marquee Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+/* Professional Utilities */
+.glass-panel {
+  @apply bg-white border border-black/30 shadow-sm rounded-none;
+}
+
+.glass-card {
+  @apply bg-white border border-black/30 shadow-sm transition-all duration-300 rounded-none;
+}
+
+.glass-card:hover {
+  @apply border-black shadow-md transform -translate-y-1 bg-gray-50;
+}
+
+.glass-nav {
+  @apply bg-white/95 backdrop-blur-md border-b border-black/20;
+}
+
+.glass-button {
+  @apply px-5 py-2.5 bg-transparent border border-black text-black text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+}
+
+.glass-button-primary {
+  @apply px-5 py-2.5 bg-black border border-black text-white text-sm font-medium hover:bg-transparent hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+}
+
+.text-gradient {
+  @apply text-black font-bold; /* Just pure black for professional look */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.25);
+}
