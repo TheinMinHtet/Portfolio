@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center md:justify-end gap-3 sm:gap-4 w-full md:w-auto mt-4 md:mt-0">
             {[
               { href: "https://www.facebook.com/thein.m.htet.56?mibextid=ZbWKwL", icon: "ri-facebook-circle-fill", label: "Facebook" },
-              { href: "https://www.linkedin.com/in/thein-min-htet-b73582349", icon: "ri-linkedin-fill", label: "LinkedIn" },
+              { href: "https://www.linkedin.com/in/thein-min-htet/", icon: "ri-linkedin-fill", label: "LinkedIn" },
               { href: "https://www.instagram.com/thein.m.htet.56?igsh=MTNnc3FudWZsMDQ3bQ==", icon: "ri-instagram-line", label: "Instagram" },
               { href: "https://t.me/thein_min_htet", icon: "ri-telegram-fill", label: "Telegram" },
               { href: "https://tiktok.com/@theinminhtet47", icon: "ri-tiktok-fill", label: "TikTok" },
