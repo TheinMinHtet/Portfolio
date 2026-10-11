@@ -45,7 +45,7 @@ const Hero = () => {
   );
 
   return (
-    <section id="about" className="pt-8 sm:pt-12 lg:pt-16 pb-20 relative overflow-hidden scroll-mt-20">
+    <section id="about" className="pt-20 sm:pt-24 lg:pt-32 pb-20 relative overflow-hidden scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full z-10">
         
         <motion.div 
