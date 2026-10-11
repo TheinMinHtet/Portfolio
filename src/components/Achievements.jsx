@@ -6,35 +6,35 @@ const Achievements = () => {
     {
       title: "1st Place Winner",
       meta: "KBZPay : AppCube Developers Bootcamp & Hackathon (March 2026)",
-      desc: "In March 2026, Me and my team \"SwiftFix\" won 1st Place in the AppCube Developers Bootcamp & Hackathon, a program designed to transform innovative ideas into functional Mini Apps. As the Team Leader, I coordinated the team's development process, guided technical decisions, and contributed to the design and implementation of our solution. Our project was recognized for its innovation, functionality, and overall quality, earning the top award in the competition.",
+      desc: "In March 2026, our team \"SwiftFix\" won 1st Place at the AppCube Developers Bootcamp & Hackathon. As Team Leader, I guided our team in building an innovative Mini App that stood out for its quality and functionality.",
       img: "/assets/images/miniapp.jpg",
       fallback: "https://via.placeholder.com/600x400/27187E/F7F7FF?text=Achievement+Award"
     },
     {
       title: "1st Place Winner",
       meta: "FITP Web Development Competition(September 2026)",
-      desc: "Worked as a member of Team J.A.R.V.I.S. to design and develop a web application within an intense 8-hour competition. Our team successfully won the Champion Prize, demonstrating strong teamwork, communication, problem-solving, and time management skills while efficiently turning our ideas into a functional web solution under tight time constraints.",
+      desc: "Worked with Team J.A.R.V.I.S. to design and build a web app in an intense 8-hour competition. Our team won the Champion Prize by turning our ideas into a working solution through strong teamwork and time management.",
       img: "/assets/images/fitp-team.jpg",
       fallback: "https://via.placeholder.com/600x400/27187E/F7F7FF?text=Achievement+Award"
     },
     {
       title: "1st Runner-Up",
       meta: "Let's Tech Hackathon (Agentic Edition) — July 2026",
-      desc: "In July 2026, I achieved 1st Runner-Up at the Let's Tech Hackathon (Agentic Edition) as the Team Leader of Team J.A.R.V.I.S. During this 48-hour hackathon, I collaborated with my teammates to develop an AI-driven solution and contributed to the planning, technical decisions, and implementation process. Throughout the competition, I gained valuable experience in agentic AI workflows, teamwork, problem-solving, and rapid development.",
+      desc: "In July 2026, I was Team Leader of Team J.A.R.V.I.S. and we won 1st Runner-Up at the Let's Tech Hackathon (Agentic Edition). During the 48-hour event, we built an AI-driven solution together, and I gained valuable experience in agentic AI, teamwork, and rapid development.",
       img: "/assets/images/IMG_3364.JPG",
       fallback: "https://via.placeholder.com/600x400/27187E/F7F7FF?text=Hackathon+Winner"
     },
     {
       title: "2nd Runner-Up",
       meta: "Technortal Hackathon: One Project, One Week (May 2026)",
-      desc: "As a Co-Team Leader, I helped lead my team to achieve 2nd Runner-Up in the Technortal Hackathon: One Project, One Week. The intensive week-long program challenged participants to build a working prototype from scratch while solving real-world problems. I collaborated on project planning, coordinated development tasks, contributed to technical decisions and implementation, and worked closely with the team to deliver a functional and innovative solution within the competition timeframe.",
+      desc: "As Co-Team Leader, I helped my team win 2nd Runner-Up in the Technortal Hackathon: One Project, One Week. During this week-long event, we built a working prototype from scratch to solve a real-world problem, and I helped with planning, development tasks, and technical decisions.",
       img: "/assets/images/technortal.jpg",
       fallback: "https://via.placeholder.com/600x400/27187E/F7F7FF?text=Hackathon+Winner"
     },
     {
       title: "Top 10 National Finalist",
       meta: "ASEAN Data Science Explorers 2025",
-      desc: "Recognized as a Top 10 National Finalist in the ASEAN Data Science Explorers 2025, a prestigious regional competition that empowers students to address real-world challenges through data analytics and data storytelling. Working as part of a team, I contributed to analyzing data, developing evidence-based insights, and creating a compelling data-driven presentation to propose innovative solutions for regional and societal issues.",
+      desc: "Recognized as a Top 10 National Finalist in the ASEAN Data Science Explorers 2025. Working with my team, I helped analyze data, develop insights, and create a data-driven presentation to propose solutions for real-world regional issues.",
       img: "/assets/images/adse2025.jpg",
       fallback: "https://via.placeholder.com/600x400/27187E/F7F7FF?text=Data+Science+Finalist"
     }

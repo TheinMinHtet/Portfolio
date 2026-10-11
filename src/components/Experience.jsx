@@ -7,25 +7,25 @@ const Experience = () => {
       title: "UIT Futsal President",
       org: "University of Information Technology Yangon(UIT)",
       date: "Jun 2026 - Present",
-      desc: "Organized and managed the university futsal tournament, overseeing match schedules, team coordination, stadium management, first-aid arrangements, water supply, and overall event operations to ensure a successful competition."
+      desc: "Organized and managed the university futsal tournament, handling match schedules, team coordination, stadium management, first-aid, and overall event operations."
     },
     {
       title: "Working Group Member & Volunteer",
       org: "Myanmar Computer Professionals Association (MCPA)",
       date: "Jun 2026 - Present",
-      desc: "Actively contribute to the organization's initiatives and events. My role involves supporting various projects, assisting with event coordination, and engaging in activities that promote the advancement of computer professionals and the IT industry in Myanmar."
+      desc: "Actively support MCPA's initiatives and events by helping with projects, event coordination, and activities that promote IT professionals in Myanmar."
     },
     {
       title: "Fresher Welcome Event Organizer",
       org: "University of Information Technology Yangon(UIT)",
       date: "Dec 2024 - Nov 2025",
-      desc: "Served as an Organizer for the UIT Fresher Welcome 2024, contributing to the planning, coordination, and execution of one of the university's major student events. Managed logistics, coordinated activities, and ensured an engaging experience."
+      desc: "Served as an Organizer for UIT Fresher Welcome 2024, helping with planning, coordination, and logistics to make one of the university's biggest student events a success."
     },
     {
       title: "UIT Fresher Welcome Event 2023 - Volunteer",
       org: "University of Information Technology Yangon (UIT)",
       date: "Dec 2023 - Jan 2024",
-      desc: "Supported event coordination and on-site activities to ensure smooth organization and engagement for new students. Gained experience in teamwork, communication, and event management."
+      desc: "Helped with event coordination and on-site activities for new students, gaining experience in teamwork and event management."
     }
   ];
 
