@@ -51,7 +51,7 @@ const Certificates = () => {
   ];
 
   return (
-    <section id="certificates" className="py-24 relative z-10">
+    <section id="certificates" className="py-24 relative z-10 scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 relative z-10">
         <div className="text-center mb-16 relative">
           <motion.h2 

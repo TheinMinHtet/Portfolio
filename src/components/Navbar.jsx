@@ -13,7 +13,34 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['About', 'Achievements', 'Certificates', 'Experience', 'Projects'];
+  const navLinks = ['About', 'Projects', 'Achievements', 'Experience', 'Certificates'];
+
+  const scrollToSection = (e, targetId) => {
+    e.preventDefault();
+    if (targetId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', ' ');
+      return;
+    }
+    const element = document.getElementById(targetId);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      window.history.pushState(null, '', `#${targetId}`);
+    }
+  };
+
+  const handleMobileNavClick = (e, item) => {
+    const targetId = item.toLowerCase() === 'contact me' ? 'contact' : item.toLowerCase();
+    scrollToSection(e, targetId);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <motion.nav 
@@ -24,7 +51,11 @@ const Navbar = () => {
       id="navbar"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex justify-between items-center relative z-[1001]">
-        <a href="#" className="font-heading text-3xl font-bold tracking-wider text-black flex items-center gap-2 whitespace-nowrap">
+        <a 
+          href="#" 
+          onClick={(e) => scrollToSection(e, 'top')}
+          className="font-heading text-3xl font-bold tracking-wider text-black flex items-center gap-2 whitespace-nowrap"
+        >
           <span className="text-accent">&lt;</span>
           TMH
           <span className="text-accent-secondary">/&gt;</span>
@@ -40,7 +71,8 @@ const Navbar = () => {
             >
               <a 
                 href={`#${item.toLowerCase()}`} 
-                className="text-text-secondary hover:text-black text-base font-medium transition-colors relative group whitespace-nowrap"
+                onClick={(e) => scrollToSection(e, item.toLowerCase())}
+                className="text-text-secondary hover:text-black text-base font-medium transition-colors relative group whitespace-nowrap cursor-pointer"
               >
                 {item}
                 <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full rounded-full"></span>
@@ -52,7 +84,11 @@ const Navbar = () => {
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: navLinks.length * 0.1 }}
           >
-            <a href="#contact" className="glass-button text-base whitespace-nowrap">
+            <a 
+              href="#contact" 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="glass-button text-base whitespace-nowrap cursor-pointer"
+            >
               Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
             </a>
           </motion.li>
@@ -83,8 +119,8 @@ const Navbar = () => {
               >
                 <a 
                   href={`#${item.toLowerCase().replace(' ', '')}`} 
-                  className="text-black text-lg font-medium block w-full" 
-                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-black text-lg font-medium block w-full cursor-pointer" 
+                  onClick={(e) => handleMobileNavClick(e, item)}
                 >
                   {item}
                 </a>

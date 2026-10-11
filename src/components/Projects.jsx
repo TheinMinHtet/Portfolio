@@ -74,7 +74,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 relative z-10 bg-white">
+    <section id="projects" className="py-24 relative z-10 bg-white scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 relative z-10">
         <div className="text-center mb-16 relative">
           <motion.h2 

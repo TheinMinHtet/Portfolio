@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+react-portfolio/
+.env
+.env.example
+db_schema.sql
+ingest.js
+/assets/

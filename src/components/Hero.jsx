@@ -2,6 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      window.history.pushState(null, '', `#${id}`);
+    }
+  };
+
   const ActionButtons = ({ className }) => (
     <motion.div 
       className={`flex flex-col sm:flex-row lg:grid lg:grid-cols-2 xl:flex xl:flex-row gap-4 w-full justify-center lg:justify-start ${className}`}
@@ -9,10 +24,18 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
     >
-      <a href="#projects" className="glass-button-primary !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center">
+      <a 
+        href="#projects" 
+        onClick={(e) => scrollToSection(e, 'projects')}
+        className="glass-button-primary !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center"
+      >
         View Work <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="#contact" className="glass-button !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center">
+      <a 
+        href="#contact" 
+        onClick={(e) => scrollToSection(e, 'contact')}
+        className="glass-button !w-full sm:!w-fit lg:!w-full xl:!w-fit justify-center"
+      >
         Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
       <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit lg:!w-full lg:col-span-2 xl:!w-fit justify-center">
@@ -22,7 +45,7 @@ const Hero = () => {
   );
 
   return (
-    <section id="about" className="pt-32 lg:pt-48 pb-24 relative overflow-hidden">
+    <section id="about" className="pt-8 sm:pt-12 lg:pt-16 pb-20 relative overflow-hidden scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full z-10">
         
         <motion.div 
@@ -37,7 +60,7 @@ const Hero = () => {
             Knowledge Engineering Student
           </h2>
           <p className="text-lg text-text-secondary max-w-lg mx-auto lg:mx-0 mb-4 leading-relaxed">
-            Currently studying at the <span className="text-black font-medium">University of Information Technology Yangon</span>. Passionate about solving real-world problems and building high-quality software solutions.
+            Currently studying at the <span className="text-black font-medium">University of Information Technology Yangon</span>. Passionate about solving real-world problems, developing skills in AI and machine learning, and building high-quality software solutions.
           </p>
 
           <motion.div 
@@ -98,14 +121,14 @@ const Hero = () => {
           <motion.div 
             animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-8 -right-8 sm:-right-4 lg:-right-8 glass-card p-4 rounded-none flex items-center gap-4"
+            className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-2 sm:-right-4 md:-right-7 glass-card p-2.5 sm:p-3.5 md:p-4 rounded-none flex items-center gap-2.5 sm:gap-3 md:gap-4 shadow-sm"
           >
-             <div className="w-12 h-12 rounded-none bg-black/5 border border-black/30 flex items-center justify-center text-black text-2xl">
+             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-none bg-black/5 border border-black/30 flex items-center justify-center text-black text-lg sm:text-xl md:text-2xl shrink-0">
                <i className="ri-code-line"></i>
              </div>
              <div>
-               <h3 className="text-black font-bold text-lg">Developer</h3>
-               <p className="text-text-secondary text-sm">AI & Web</p>
+               <h3 className="text-black font-bold text-sm sm:text-base md:text-lg leading-tight">Developer</h3>
+               <p className="text-text-secondary text-[11px] sm:text-xs md:text-sm font-medium leading-tight">AI/ML & Web</p>
              </div>
           </motion.div>
         </motion.div>
