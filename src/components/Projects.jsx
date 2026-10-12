@@ -8,6 +8,7 @@ const Projects = () => {
       desc: "A clinic OPD system with three roles: Patient, Doctor, and Admin. Features AI triage, appointment booking, an AI Scribe, and clinical safety alerts wrapped in a resilient architecture.",
       tech: ["Next.js", "React", "TypeScript", "PostgreSQL"],
       icon: "ri-hospital-line",
+      image: "/assets/images/medihub.png",
       link: "https://github.com/TheinMinHtet/MediHub",
       demo: "https://medi-hub-psi.vercel.app",
       color: "bg-teal-500/10 text-teal-600"
@@ -116,9 +117,19 @@ const Projects = () => {
               whileHover={{ y: -6, transition: { delay: 0, duration: 0.2 } }}
               className="glass-card flex flex-col h-full group p-8"
             >
-              <div className={`w-14 h-14 rounded-none flex items-center justify-center mb-6 border border-black/30 ${proj.color} transition-colors group-hover:border-black`}>
-                <i className={`${proj.icon} text-2xl`}></i>
-              </div>
+              {proj.image ? (
+                <div className="w-full h-44 mb-6 overflow-hidden border border-black/30 group-hover:border-black transition-colors relative">
+                  <img 
+                    src={proj.image} 
+                    alt={proj.title} 
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+              ) : (
+                <div className={`w-14 h-14 rounded-none flex items-center justify-center mb-6 border border-black/30 ${proj.color} transition-colors group-hover:border-black`}>
+                  <i className={`${proj.icon} text-2xl`}></i>
+                </div>
+              )}
               
               <h3 className="text-xl font-bold mb-3 text-black group-hover:text-accent transition-colors">{proj.title}</h3>
               <p className="text-text-secondary mb-8 flex-1 text-sm leading-relaxed">{proj.desc}</p>

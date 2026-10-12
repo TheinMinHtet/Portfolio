@@ -65,11 +65,11 @@ body::before {
 }
 
 .glass-button {
-  @apply px-6 py-3 bg-transparent border border-black text-black text-base font-medium hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+  @apply px-6 py-3 bg-white border border-black text-black text-base font-medium shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none hover:bg-zinc-50 transition-all duration-150 flex items-center justify-center gap-2 rounded-none w-fit cursor-pointer;
 }
 
 .glass-button-primary {
-  @apply px-6 py-3 bg-black border border-black text-white text-base font-medium hover:bg-transparent hover:text-black transition-colors duration-300 flex items-center justify-center gap-2 rounded-none w-fit;
+  @apply px-6 py-3 bg-black border border-black text-white text-base font-semibold shadow-[4px_4px_0px_#71717a] hover:shadow-[2px_2px_0px_#71717a] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none hover:bg-zinc-800 transition-all duration-150 flex items-center justify-center gap-2 rounded-none w-fit cursor-pointer;
 }
 
 .text-gradient {

@@ -94,7 +94,7 @@ const Navbar = () => {
           </motion.li>
         </ul>
         
-        <div className="lg:hidden text-2xl text-black cursor-pointer z-50 p-2 bg-white border border-black/30 shadow-sm" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <div className="lg:hidden text-2xl text-black cursor-pointer z-50 p-2 bg-white border border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <i className={mobileMenuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
         </div>
       </div>

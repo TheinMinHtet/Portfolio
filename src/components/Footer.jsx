@@ -65,10 +65,8 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.1)' }}
-            whileTap={{ scale: 0.9 }}
             onClick={scrollTop} 
-            className="fixed bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 bg-white rounded-none border border-black text-black text-xl flex justify-center items-center cursor-pointer shadow-[4px_4px_0px_rgba(0,0,0,1)] z-50 hover:text-accent hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-shadow" 
+            className="fixed bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 bg-white rounded-none border border-black text-black text-xl flex justify-center items-center cursor-pointer shadow-[4px_4px_0px_rgba(0,0,0,1)] z-50 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none hover:bg-zinc-50 transition-all duration-150" 
             aria-label="Scroll to top"
           >
             <i className="ri-arrow-up-line"></i>
