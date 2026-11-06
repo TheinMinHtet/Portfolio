@@ -38,7 +38,7 @@ const Hero = () => {
       >
         Contact Me <i className="ri-arrow-right-up-line text-lg leading-none"></i>
       </a>
-      <a href="/assets/Thein_Min_Htet_CV.pdf" download="Thein_Min_Htet_CV.pdf" className="glass-button !w-full sm:!w-fit lg:!w-full lg:col-span-2 xl:!w-fit justify-center">
+      <a href="/assets/files/Thein Min Htet - CV.pdf" download="Thein Min Htet - CV.pdf" className="glass-button !w-full sm:!w-fit lg:!w-full lg:col-span-2 xl:!w-fit justify-center">
         Download CV <i className="ri-download-line text-lg leading-none"></i>
       </a>
     </motion.div>
