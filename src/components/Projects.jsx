@@ -46,12 +46,14 @@ const Projects = () => {
       color: "bg-emerald-500/10 text-emerald-400"
     },
     {
-      title: "Nextjs Authentication",
-      desc: "Authentication system built with Next.js supporting credential login and Google OAuth. Uses JWT-based session management and email verification.",
-      tech: ["Next.js", "React", "TypeScript"],
-      icon: "ri-lock-password-line",
-      link: "https://github.com/TheinMinHtet/nextjs_authentication_and_login",
-      color: "bg-amber-500/10 text-amber-400"
+      title: "SalePilot",
+      desc: "Autonomous AI sales agents crafted for independent merchants. Elevate customer conversations across Telegram and social channels with automated order taking and instant slip verification.",
+      tech: ["Next.js", "React", "TypeScript", "AI Agents"],
+      icon: "ri-robot-2-line",
+      image: "/assets/images/salepilot.png",
+      link: "https://github.com/TheinMinHtet/Sale_Brain",
+      demo: "https://sale-pilot-ashy.vercel.app",
+      color: "bg-indigo-500/10 text-indigo-600"
     }
   ];
 
@@ -118,11 +120,13 @@ const Projects = () => {
               className="glass-card flex flex-col h-full group p-8"
             >
               {proj.image ? (
-                <div className="w-full h-44 mb-6 overflow-hidden border border-black/30 group-hover:border-black transition-colors relative">
+                <div className="w-full aspect-[16/9] mb-6 overflow-hidden border border-black/30 group-hover:border-black transition-colors relative bg-zinc-50 flex items-center justify-center">
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02] will-change-transform" 
                   />
                 </div>
               ) : (
