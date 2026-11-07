@@ -14,6 +14,26 @@ const Projects = () => {
       color: "bg-teal-500/10 text-teal-600"
     },
     {
+      title: "SalePilot",
+      desc: "Autonomous AI sales agents crafted for independent merchants. Elevate customer conversations across Telegram and social channels with automated order taking and instant slip verification.",
+      tech: ["Next.js", "React", "TypeScript", "AI Agents"],
+      icon: "ri-robot-2-line",
+      image: "/assets/images/salepilot.png",
+      link: "https://github.com/TheinMinHtet/Sale_Brain",
+      demo: "https://sale-pilot-ashy.vercel.app",
+      color: "bg-indigo-500/10 text-indigo-600"
+    },
+    {
+      title: "Start-Up Agentic",
+      desc: "An agentic AI platform designed for startup ideation, automated workflow execution, and intelligent business planning powered by autonomous agent architectures.",
+      tech: ["React", "TypeScript", "AI Agents", "Tailwind CSS"],
+      icon: "ri-rocket-2-line",
+      image: "/assets/images/startup-agentic.jpg",
+      link: "https://github.com/TheinMinHtet/Start-Up-Agentic",
+      demo: "https://startup-agentic.netlify.app/",
+      color: "bg-indigo-500/10 text-indigo-500"
+    },
+    {
       title: "PixelProof",
       desc: "PixelProof is a Deepfake Detection website where you can check if a video or photo is real or tampered with. Built for anyone who wants to verify truth online.",
       tech: ["HTML", "Python", "CSS"],
@@ -30,32 +50,12 @@ const Projects = () => {
       color: "bg-blue-500/10 text-blue-400"
     },
     {
-      title: "Start-Up Agentic",
-      desc: "An agentic AI platform designed for startup ideation, automated workflow execution, and intelligent business planning powered by autonomous agent architectures.",
-      tech: ["React", "TypeScript", "AI Agents", "Tailwind CSS"],
-      icon: "ri-rocket-2-line",
-      image: "/assets/images/startup-agentic.jpg",
-      link: "https://github.com/TheinMinHtet/Start-Up-Agentic",
-      demo: "https://startup-agentic.netlify.app/",
-      color: "bg-indigo-500/10 text-indigo-500"
-    },
-    {
       title: "Skill-Sharing-Platform",
       desc: "A web application that enables users to share their skills, request new ones, and connect with others. Powered by PHP, MySQL with a modern frontend.",
       tech: ["PHP", "MySQL", "HTML/CSS/JS"],
       icon: "ri-exchange-box-line",
       link: "https://github.com/TheinMinHtet/Skill-Sharing-Platform",
       color: "bg-emerald-500/10 text-emerald-400"
-    },
-    {
-      title: "SalePilot",
-      desc: "Autonomous AI sales agents crafted for independent merchants. Elevate customer conversations across Telegram and social channels with automated order taking and instant slip verification.",
-      tech: ["Next.js", "React", "TypeScript", "AI Agents"],
-      icon: "ri-robot-2-line",
-      image: "/assets/images/salepilot.png",
-      link: "https://github.com/TheinMinHtet/Sale_Brain",
-      demo: "https://sale-pilot-ashy.vercel.app",
-      color: "bg-indigo-500/10 text-indigo-600"
     }
   ];
 
