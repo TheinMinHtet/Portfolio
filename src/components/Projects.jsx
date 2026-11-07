@@ -30,12 +30,13 @@ const Projects = () => {
       color: "bg-blue-500/10 text-blue-400"
     },
     {
-      title: "Miracle - Zodiac Personality",
-      desc: "C++ console astrology and fortune app. Offers insights on personality, compatibility, health, luck, and love wrapped in an engaging, colorful interface.",
-      tech: ["C++"],
-      icon: "ri-sparkling-fill",
-      link: "https://github.com/TheinMinHtet/Miracle",
-      color: "bg-pink-500/10 text-pink-400"
+      title: "Start-Up Agentic",
+      desc: "An agentic AI platform designed for startup ideation, automated workflow execution, and intelligent business planning powered by autonomous agent architectures.",
+      tech: ["React", "TypeScript", "AI Agents", "Tailwind CSS"],
+      icon: "ri-rocket-2-line",
+      link: "https://github.com/TheinMinHtet/Start-Up-Agentic",
+      demo: "https://startup-agentic.netlify.app/",
+      color: "bg-indigo-500/10 text-indigo-500"
     },
     {
       title: "Skill-Sharing-Platform",
