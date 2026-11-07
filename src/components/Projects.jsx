@@ -34,6 +34,7 @@ const Projects = () => {
       desc: "An agentic AI platform designed for startup ideation, automated workflow execution, and intelligent business planning powered by autonomous agent architectures.",
       tech: ["React", "TypeScript", "AI Agents", "Tailwind CSS"],
       icon: "ri-rocket-2-line",
+      image: "/assets/images/startup-agentic.jpg",
       link: "https://github.com/TheinMinHtet/Start-Up-Agentic",
       demo: "https://startup-agentic.netlify.app/",
       color: "bg-indigo-500/10 text-indigo-500"
